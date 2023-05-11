@@ -1,0 +1,120 @@
+.info-section {
+    background-color:var(--background);
+}
+
+.info-wrap {
+    background-color:var(--background-wrap);
+}
+
+/* About Me Start */
+
+#about-me {
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.about-me-wrap {
+    background-color:var(--background-wrap);
+    width:1280px;
+    display:flex;
+}
+
+.about-me-text {
+    width:80%;
+    padding:20px;
+}
+
+.about-me-links {
+    display:table;
+    vertical-align: middle;
+    width:20%;
+    padding:20px;
+}
+
+.about-me-links-wrap {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.about-me-links-table {
+    display:table;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.about-me-link-wrap {
+    display:table-row;
+}
+
+.about-me-link-wrap button {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#about-me .languages {
+    display:flex;
+}
+
+#about-me .languages .language-wrap {
+    width:20%;
+    max-width:125px;
+}
+
+#about-me .languages .language-wrap img {
+    width:100%;
+}
+
+/* About Me End */
+
+/* Experience Start */
+
+#experience {
+    width:100%;
+    height:1000px;
+    display:flex;
+    justify-content:center;
+}
+
+.experience-wrap {
+    width:1280px;
+    display:flex;
+}
+
+.experience-text {
+    width:65%;
+    padding:20px;
+}
+
+.experience-link {
+    width:65%;
+    padding:20px;
+}
+
+/* Experience End */
+
+/* Projects Start */
+
+#projects {
+    width:100%;
+    height:1000px;
+    display:flex;
+    justify-content:center;
+}
+
+.projects-wrap {
+    width:1280px;
+    display:flex;
+}
+
+.projects-text {
+    width:65%;
+    padding:20px;
+}
+
+.projects-link {
+    width:65%;
+    padding:20px;
+}
+
+/* Projects End */

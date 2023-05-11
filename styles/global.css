@@ -1,0 +1,128 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	background-color: var(--background);
+	padding: 0px;
+	margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: verdana, sans-serif;
+	color:var(--text-light);
+	margin:0px;
+	line-height:1.25em;
+}
+
+h1 {
+    font-size:42px;
+	color: var(--text-light);
+}
+
+h2 {
+	font-size:36px;
+	margin-top:15px;
+	margin-bottom:10px;
+}
+
+h5 {
+	font-size:16px;
+}
+
+.button {
+	transition: all 0.5s;
+	background-color: var(--button);
+	padding: 10px;
+	border-width: 0px;
+	border-radius: 10px;
+	height: 40px;
+	width: 170px;
+	font-size:medium;
+	font-weight:bold;
+}
+
+.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button:hover {
+	background-color: var(--button-hov);
+}
+
+p {
+	line-height:1.6em;
+	padding-bottom:17px;
+}
+
+:root {
+	--menu-solid:#1e1e1e;
+	--menu-accent:#007acc;
+	--button:#007acc;
+	--button-hov:#004777;
+	--text-light:white;
+	--header-fade:rgba(0,10,20,.8);
+	--background:#252526;
+	--background-wrap:#2d2d30;
+}
