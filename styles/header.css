@@ -12,7 +12,7 @@
 
 .header-top-wrap {
     height:270px;
-    width: 1200px;
+    max-width: 1200px;
     margin-left:auto;
     margin-right:auto;
 }
@@ -95,6 +95,34 @@
     font-weight:bold;
 }
 
+.header-menu-wrap a {
+    text-decoration:none;
+}
+
 .header-menu-wrap li:hover {
     background-color:rgb(0,0,0,0.6);
+}
+
+.header-top-mobile {
+	display:none;
+	padding:20px;
+	padding-top:25px;
+	padding-bottom:25px;
+}
+
+@media all and (max-width: 750px) {
+	.header-top {
+		display:none;
+	}
+
+	.header-top-mobile {
+		display:block;
+	}
+}
+
+@media all and (max-width: 500px) {
+	.header-menu-wrap {
+		flex-wrap:wrap;
+		justify-content:center;
+	}
 }

@@ -24,12 +24,14 @@
 				</div>
 			</div>
 		</div>
+		<div class="header-top-mobile">
+			<h1>Joel Kuehne</h1>
+		</div>
 		<div class="header-menu">
 			<ul class="header-menu-wrap">
-				<li><h5>About Me</h5></li>
-				<li><h5>Expereince</h5></li>
-				<li><h5>Projects</h5></li>
-				<li><h5>Hobbies</h5></li>
+				<a href="#about-me"><li><h5>About Me</h5></li></a>
+				<a href="#projects"><li><h5>Projects</h5></li></a>
+				<a href="#experience"><li><h5>Expereince</h5></li></a>
 			</ul>
 		</div>  
 		<!-- Header End -->
@@ -46,8 +48,8 @@
 					take that passion and turn it into a carrer.
 					</p>
 					<p>
-					As far as languages go, I've done most of my work in C++, but I am also familiar with C# .NET. I've also dabbled with
-					a little bit of web development in PHP, HTML, and JavaScript that I used at my job at The Next Stepassets.
+					As far as languages go, I've done most of my work in C++, but I am also familiar with C# .NET and Python. I've also dabbled with
+					a little bit of web development in PHP, HTML, and JavaScript that I used at my job at The Next Step.
 					</p>
 					<div class="languages">
 						<div class="language-wrap">
@@ -57,13 +59,10 @@
 							<img src="assets/CS.png">
 						</div>
 						<div class="language-wrap">
-							<img src="assets/HTML.png">
+							<img src="assets/Python.png">
 						</div>
 						<div class="language-wrap">
 							<img src="assets/JS.png">
-						</div>
-						<div class="language-wrap">
-							<img src="assets/CSS.png">
 						</div>
 					</div>
 				</div>
@@ -71,14 +70,11 @@
 					<div class="links-wrap">
 						<div class="links-table">
 							<div class="link-wrap">
-								<button class="button gh-but" href="https://github.com/JoelKueh">
-									<span>GitHub</span>
-								</button>
-							</div>
-							<div class="link-wrap">
-								<button class="button ot-but" href="">
-									<span>Other</span>
-								</button>
+								<a href="https://github.com/JoelKueh">
+									<button class="button gh-but">
+										<span>GitHub</span>
+									</button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -95,28 +91,98 @@
 					</h2>
 					<p>
 					As I said before, programming is both my passion and my hobby. As a result, I have gained a wide variety of different experiences through various personal projects that I have done. 
-					</p>
-					<p>
-					From a command line chess game to a DirectX11 based Mandelbrot Set Renderer, you can read more about some of my personal projects in the links on the right. (More on my GitHub).
+					You can read more about my personal projects in the entries below.
 					</p>
 				</div>
-				<div class="links">
-					<div class="links-wrap">
-						<div class="links-table">
-							<div class="link-wrap">
-								<button class="button gh-but" href="projects/MandelbrotSet">
-									<span>MandelbrotSet</span>
-								</button>
+				<div class="JChessV2">
+					<div class="JC-text">
+						<h3>
+							JChessV2
+						</h3>
+						<p>
+						JChessV2 is a C++ remake of a Chess game I made in C# called JChess. The project was designed to be the base of a Chess AI that I will start writing soon.
+						As a chess AI needs to look through hundreds of millions of positions every time it makes a decision. I worked very hard to make sure that move generation
+						would be as fast as possible. The move generation algorighms make use of lookup tables and bithacks to efficiently generate moves. After multiple iterations
+						and hous upon hours of reading move generation theory on <a href="https://www.chessprogramming.org/">ChessProgramming.org</a>, I managed to search through
+						chess positions at 43 million nodes per second on a single thread.
+						</p>
+						<p>
+						Currently, the game can only be played through a terminal UI, but I'm leanrning the OpenGL api to add an optional GUI as well. I'm also working with a couple
+						of friends to add networking to the game so that users can play online rather than just locally. Eventually, my friends and I will move on to writing the AI
+						itself, but that can't come without a decent ammount of prep work and a lot more reading. You can take a look at what we've got so far on my github in
+						the link on the right.
+						</p>
+					</div>
+					<div class="links">
+						<div class="links-wrap">
+							<div class="links-table">
+								<div class="link-wrap">
+									<a href="https://github.com/JoelKueh/JChessV2">
+										<button class="button gh-but">
+											<span>GitHub</span>
+										</button>
+									</a>
+								</div>
 							</div>
-							<div class="link-wrap">
-								<button class="button ot-but" href="projects/JChessV2">
-									<span>JChessV2</span>
-								</button>
+						</div>
+					</div>
+				</div>
+				<div class="Mandelbrot">
+					<div class="Mandelbrot-text">
+						<h3>
+							Mandelbrot Set
+						</h3>
+						<p>
+						In the spring of my senior year of high school, I really took an interest in the Mandelbrot Set. If you haven't heard of it, it's a fractal produced by a
+						relatively simple recursive algorithm. If the algorithm converges for a given point on the complex plane, then you plot a black point, if the algorighm
+						diverges for a given point, you plot a white point (in reality, most people plot a color based on the number of iterations it took for the result to reach
+						some escape radius). The set of all points where the algorithm converges is the Mandelbrot Set.
+						</p>
+						<p>
+						As this algorithm has to once on every pixel on the screen individually. I thought it would be interesting to learn how pass this computation off to the GPU
+						for efficiency. As a result, I decided to write this program with the DirectX API. At the moment, this program just renders one frame of the Mandelbrot Set.
+						You can't interact with it, or zoom in to different sections of it. I have plans to add to this program and fix this in the future.
+						</p>
+					</div>
+					<div class="links">
+						<div class="links-wrap">
+							<div class="links-table">
+								<div class="link-wrap">
+									<a href="https://github.com/JoelKueh/MandelbrotSet">
+										<button class="button ot-but">
+											<span>GitHub</span>
+										</button>
+									</a>
+								</div>
 							</div>
-							<div class="link-wrap">
-								<button class="button ot-but" href="projects/2022RobotCode">
-									<span>RobotCode</span>
-								</button>
+						</div>
+					</div>
+				</div>
+				<div class="JEL">
+					<div class="JEL-text">
+						<h3>
+							Project JEL
+						</h3>
+						<p>
+						Project JEL is a fanmade pokemon game that I'm writing for fun with a couple of my friends. We're currently using GameMakerStudio as our engine.
+						I act as the backend developer and GitHub maintainer, so I had to learn a lot about resolving merge conflicts and other best-practices for Git.
+						</p>
+						<p>
+						The project seems pretty simple on the surface, but there were a couple of interesting problems that I had to solve that involved writing a server
+						in node.js that acts as a middle man to a text-stream based battle server as well as a C++ .dll that allows GameMaker to communicate with it.
+						Overall, the project has been a lot of fun to make.
+						</p>
+					</div>
+					<div class="links">
+						<div class="links-wrap">
+							<div class="links-table">
+								<div class="link-wrap">
+									<a href="https://github.com/JoelKueh/ProjectJel">
+										<button class="button ot-but">
+											<span>GitHub</span>
+										</button>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -127,7 +193,7 @@
 		<!-- Experience Start -->
 		<div id="experience" class="info-section">
 			<div class="experience-wrap info-wrap">
-				<h2>
+				<h2 style="width:auto;">
 					Team Experience
 				</h2>
 				<div class="UKO">
@@ -138,20 +204,30 @@
 						<p>
 						Since Fall 2022, I've been working with a group called the University Kernel Object. In essence, we are a group of UMNTC students who are really passionate
 						about the Linux Kernel. Led by a couple of University Professors as well as a Kernel maintainer, we have been exploring different aspects of the Linux Kernel and learning
-						about Kernel development. You can read more about us in the links on the right.
+						about Kernel development.
+						</p>
+						<p>
+						In particular, I have been involved with the Virtual Memory Subgroup. Over the spring of 2023, we searched through kernel source code to learn how virtual memory
+						was implemented in the kernel. In the end, we wrote a program which could map the virtual address space of a running program to its physical counterpart.
 						</p>
 					</div>
 					<div class="links">
-						<div class="links-table">
-							<div class="link-wrap">
-								<button class="button gh-but" href="https://github.com/UMN-Kernel-Object">
-									<span>U.ko Github</span>
-								</button>
-							</div>
-							<div class="link-wrap">
-								<button class="button ot-but" href="experience/virtmem">
-									<span>U.ko Virtmem</span>
-								</button>
+						<div class="links-wrap">
+							<div class="links-table">
+								<div class="link-wrap">
+									<a href="https://github.com/UMN-Kernel-Object">
+										<button class="button gh-but">
+											<span>U.ko Github</span>
+										</button>
+									</a>
+								</div>
+								<div class="link-wrap">
+									<a href="https://github.com/UMN-Kernel-Object/virtmem">
+										<button class="button gh-but">
+											<span>VirtMem</span>
+										</button>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -163,15 +239,19 @@
 						</h3>
 						<p>
 						Over the summer of 2022, I interned at <a href="https://thenstep.com/">The Next Step</a>. I was responsible making and maintinaing websites
-						for various clients. You can read more about my work at TNS in the links on the right.
+						for various clients. I learned how to be responsible for projects and manage my time properly while also learning how to work remotely on a team.
 						</p>
 					</div>
 					<div class="links">
-						<div class="links-table">
-							<div class="link-wrap">
-								<button class="button ot-but" href="experience/the-next-step">
-									<span>The Next Step</span>
-								</button>
+						<div class="links-wrap">
+							<div class="links-table">
+								<div class="link-wrap">
+									<a href="https://thenstep.com/">
+										<button class="button ot-but">
+											<span>The Next Step</span>
+										</button>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -188,15 +268,19 @@
 						</p>
 					</div>
 					<div class="links">
-						<div class="links-table">
-							<div class="link-wrap">
-								<button class="button ot-but" href="experience/the-next-step">
-									<span>The Next Step</span>
-								</button>
+						<div class="links-wrap">
+							<div class="links-table">
+								<div class="link-wrap">
+									<a href="http://www.teamtobor.org/">
+										<button class="button ot-but">
+											<span>Tobor 2143</span>
+										</button>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
-
+				</div>
 			</div>
 		</div>
 		<!-- Experience End -->
